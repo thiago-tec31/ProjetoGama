@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - WebApi", "0 - WebApi", "{65116CCB-212A-46AF-9C4A-02C096213EB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{ED53FB78-30A8-41F1-9E8A-11091F9A04B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{97328265-681D-412F-BECA-3E2141C9710D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{62170AB6-5B0F-44CD-AEC6-70DAADE5FD49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{35C83CF9-1306-4A43-A30F-A30A3FB7D47C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoGama.Domain", "ProjetoGama.Domain\ProjetoGama.Domain.csproj", "{DF02C5B0-5AAE-493F-9F98-E37F1A06F997}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF02C5B0-5AAE-493F-9F98-E37F1A06F997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF02C5B0-5AAE-493F-9F98-E37F1A06F997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF02C5B0-5AAE-493F-9F98-E37F1A06F997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF02C5B0-5AAE-493F-9F98-E37F1A06F997}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF02C5B0-5AAE-493F-9F98-E37F1A06F997} = {97328265-681D-412F-BECA-3E2141C9710D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83D6B50F-4957-4CE9-8C4F-A7AF0E8B1138}
+	EndGlobalSection
+EndGlobal

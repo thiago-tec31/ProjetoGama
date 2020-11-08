@@ -1,0 +1,4 @@
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Domain\obj\Debug\netcoreapp3.1\ProjetoGama.Domain.csprojAssemblyReference.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Domain\obj\Debug\netcoreapp3.1\ProjetoGama.Domain.AssemblyInfoInputs.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Domain\obj\Debug\netcoreapp3.1\ProjetoGama.Domain.AssemblyInfo.cs
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Domain\obj\Debug\netcoreapp3.1\ProjetoGama.Domain.csproj.CoreCompileInputs.cache
