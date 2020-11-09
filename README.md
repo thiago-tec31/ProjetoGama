@@ -34,7 +34,7 @@ Projeto desenvolvido para conclusão do curso na Gama Academy - Trio: Thiago Cav
 
 ### Ferramentas de trabalho
 
-- Azure Devops para o gerenciamento
+- Azure Devops para alocar das atividades e geração de versão 
 - Visual studio 2019 (Back End)
 - Banco de dados SQL Server 2019
 - Angular (Front End)
