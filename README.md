@@ -32,6 +32,10 @@ Projeto desenvolvido para conclusão do curso na Gama Academy - Trio: Thiago Cav
 
 ## A priorização das atividades utilizando Story Points
 
+# Processo de formação do grupo
+
+> O grupo foi escolhido pela organização da academia, mas mesmo com pouco tempo de convívio, estamos nos dando super bem! Nosso esforços estão sendo direcionados exatamente para o foco do projeto da academia. A união é exatamente a palavra que define nosso grupo, acreditamos que com ela é mais provável alcançar o sucesso!
+
 ### Ferramentas de trabalho
 
 - Azure Devops para alocar das atividades e geração de versão 
