@@ -1,32 +1,49 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace ProjetoGama.Domain.Entities
 {
-    public class Actor : User
+    public class Actor
     {
 
-        public Actor(string name,
-                     DateTime birthDate,
-                     Ethnicity ethnicity,
-                     List<Genre> genres,
+        public Actor(List<int> genresId,
                      Sex sex,
-                     double salaryHour, 
-                     int relevance,
-                     Skill skill) :base(name, birthDate, ethnicity, sex)
+                     double salary,
+                     int userId,
+                     int ranking) 
         {
-            
-            Skill = skill;
-            Genres = genres;
-            Relevance = relevance;
-            SalaryHour = salaryHour;
+            UserId = userId;
+            Sex = sex;
+            GenresId = genresId;
+            Ranking = ranking;
+            Salary = salary;
         }
 
-        public List<Genre> Genres { get; private set; }
-        public Skill Skill { get; private set; }
-        public double SalaryHour { get; private set; }
-        public int Relevance { get; private set; }
+        public int Id { get; private set; }
+        public List<int> GenresId { get; private set; }
+        public double Salary { get; private set; }
+        public int Ranking { get; private set; }
+        public int UserId { get; private set; }
+        public Sex Sex { get; private set; }
+
+        public bool IsValid()
+        {
+            var valid = true;
+
+            if ((Salary <= 0) || (Ranking <= 0) || (UserId <= 0) || !Enum.IsDefined(typeof(Sex), Sex) )
+            {
+                valid = false;
+            }
+
+            return valid;
+
+        }
+
+    }
+
+    public enum Sex
+    {
+        Man,
+        Woman
     }
 }

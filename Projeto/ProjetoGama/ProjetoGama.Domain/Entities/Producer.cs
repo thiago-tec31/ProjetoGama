@@ -1,15 +1,14 @@
 ﻿
 
+using System;
+
 namespace ProjetoGama.Domain.Entities
 {
-    public class Producer : User
+    public class Producer
     {
-        public Producer(string name,
-                       int age,
-                       Ethnicity ethnicity,
-                       Sex genre) : base(name, age, ethnicity, genre)
-        {
-                
-        }
+
+        public int Id { get; private set; }
+
+        public int UserId { get; private set; }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\bin\Debug\netcoreapp3.1\ProjetoGama.Application.deps.json
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\bin\Debug\netcoreapp3.1\ProjetoGama.Application.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\bin\Debug\netcoreapp3.1\ProjetoGama.Application.pdb
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\bin\Debug\netcoreapp3.1\ProjetoGama.Domain.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\bin\Debug\netcoreapp3.1\ProjetoGama.Domain.pdb
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.csprojAssemblyReference.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.AssemblyInfoInputs.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.AssemblyInfo.cs
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.csproj.CoreCompileInputs.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.csproj.CopyComplete
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Application\obj\Debug\netcoreapp3.1\ProjetoGama.Application.pdb

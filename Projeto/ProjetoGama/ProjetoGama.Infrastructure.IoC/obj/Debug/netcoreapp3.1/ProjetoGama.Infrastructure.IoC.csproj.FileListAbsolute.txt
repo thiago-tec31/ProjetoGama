@@ -1,0 +1,16 @@
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.deps.json
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.pdb
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Application.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Domain.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Application.pdb
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.pdb
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\bin\Debug\netcoreapp3.1\ProjetoGama.Domain.pdb
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.csprojAssemblyReference.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.AssemblyInfoInputs.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.AssemblyInfo.cs
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.csproj.CoreCompileInputs.cache
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.csproj.CopyComplete
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.dll
+C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.IoC\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.IoC.pdb
