@@ -49,6 +49,8 @@ namespace ProjetoGama.Infrastructure.Repositories
                         while (reader.Read())
                         {
 
+                            genreList.Clear();
+
                             var sqlGenres = @"SELECT
                                             G.[GenreId]
                                             FROM [dbo].[ACTOR_GENRE] AG INNER JOIN [dbo].[GENRE] G ON AG.GenreId = G.GenreId
@@ -165,6 +167,48 @@ namespace ProjetoGama.Infrastructure.Repositories
             }
         }
 
+        public async Task<int> GetActorByUserIdAsync(int UserId)
+        {
+            try
+            {
+                using (var con = new SqlConnection(_configuration["ConnectionString"]))
+                {
+                    con.Open();
+                    var sqlCmd = @"SELECT 
+                                  A.[ActorId]
+                                 ,A.[UserId]
+	                             ,A.[Racking]
+                                 ,A.[Sex]
+	                             ,A.[SalaryHour]
+                                 FROM[dbo].[ACTOR] A
+                                WHERE A.[UserId] = @UserId";
+
+                    using (var cmd = new SqlCommand(sqlCmd, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@UserId", UserId);
+
+                        var reader = await cmd
+                                            .ExecuteReaderAsync()
+                                            .ConfigureAwait(false);
+
+                        var genreList = new List<int>();
+
+                        while (reader.Read())
+                        { 
+                            return int.Parse(reader["ActorId"].ToString());
+                        }
+
+                        return 0;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<int> InsertActorAsync(Actor actor)
         {
              try
@@ -207,13 +251,13 @@ namespace ProjetoGama.Infrastructure.Repositories
 
                                 using (SqlCommand cmd2 = new SqlCommand(sql, con2))
                                 {
-                                    con.Open();
-                                    cmd.CommandType = CommandType.Text;
+                                    con2.Open();
+                                    cmd2.CommandType = CommandType.Text;
 
-                                    cmd.Parameters.AddWithValue("ActorId", id);
-                                    cmd.Parameters.AddWithValue("GenreId", element);
+                                    cmd2.Parameters.AddWithValue("ActorId", id);
+                                    cmd2.Parameters.AddWithValue("GenreId", element);
 
-                                    cmd.ExecuteScalar();
+                                    cmd2.ExecuteScalar();
 
                                 }
                             }

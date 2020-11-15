@@ -62,9 +62,19 @@ namespace ProjetoGama.Application.ProjetoGama
                 return default;
             }
 
-            if (!actor.IsSalaryHourGreaterThanZero())
+            if (!actor.IsRankingBeBetweenZeroAndFive())
             {
                 _notification.NewNotificationConflict("É necessário informar o ranking entre 0 e 5. ");
+                return default;
+            }
+
+            var actorId = await _actorRepository
+                            .GetActorByUserIdAsync(user.Id)
+                            .ConfigureAwait(false);
+
+            if (actorId > 0)
+            {
+                _notification.NewNotificationConflict("Ator já cadastrado.");
                 return default;
             }
 
@@ -72,7 +82,7 @@ namespace ProjetoGama.Application.ProjetoGama
                      .InsertActorAsync(actor)
                      .ConfigureAwait(false);
 
-            return await GetByIdAsync(id);
+           return await GetByIdAsync(id);
 
         }
     }

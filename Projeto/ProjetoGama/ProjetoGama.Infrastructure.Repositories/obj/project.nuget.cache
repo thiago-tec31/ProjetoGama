@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oHnnlJ3sYboDU5cEtF+oxweaCGUF9oGjjBK/yRAFBaTWqztQUfmAa4uyCDeS/p0wsrDQkJ3ti7Chvs1ZYSWINQ==",
+  "dgSpecHash": "tO7Bk+YsQzKxyd4pZPZCOPHLBwAkt6Uzd+I0xTUanJL1Obofc7Ynyu5d/uxuHNoTFC7mI0BH3kLBCY55E9Rq4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.Repositories\\ProjetoGama.Infrastructure.Repositories.csproj",
+  "projectFilePath": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.Repositories\\ProjetoGama.Infrastructure.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thiaago\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Thiaago\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",

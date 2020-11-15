@@ -10,6 +10,7 @@ namespace ProjetoGama.Infrastructure.IoC.Application
     {
         internal void ChildServiceRegister(IServiceCollection services)
         {
+            services.AddScoped<ILoginAppServices, LoginAppServices>();
             services.AddScoped<IUserAppServices, UserAppServices>();
             services.AddScoped<IActorAppServices, ActorAppServices>();
         }

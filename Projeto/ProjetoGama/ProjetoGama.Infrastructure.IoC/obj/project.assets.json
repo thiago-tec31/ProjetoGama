@@ -3857,11 +3857,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.IoC\\ProjetoGama.Infrastructure.IoC.csproj",
+      "projectUniqueName": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.IoC\\ProjetoGama.Infrastructure.IoC.csproj",
       "projectName": "ProjetoGama.Infrastructure.IoC",
-      "projectPath": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.IoC\\ProjetoGama.Infrastructure.IoC.csproj",
+      "projectPath": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.IoC\\ProjetoGama.Infrastructure.IoC.csproj",
       "packagesPath": "C:\\Users\\Thiaago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.IoC\\obj\\",
+      "outputPath": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.IoC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thiaago\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3877,11 +3877,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Application\\ProjetoGama.Application.csproj": {
-              "projectPath": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Application\\ProjetoGama.Application.csproj"
+            "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Application\\ProjetoGama.Application.csproj": {
+              "projectPath": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Application\\ProjetoGama.Application.csproj"
             },
-            "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.Repositories\\ProjetoGama.Infrastructure.Repositories.csproj": {
-              "projectPath": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.Repositories\\ProjetoGama.Infrastructure.Repositories.csproj"
+            "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.Repositories\\ProjetoGama.Infrastructure.Repositories.csproj": {
+              "projectPath": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Infrastructure.Repositories\\ProjetoGama.Infrastructure.Repositories.csproj"
             }
           }
         }

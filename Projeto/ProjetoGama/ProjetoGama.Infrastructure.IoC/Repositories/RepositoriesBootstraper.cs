@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using ProjetoGama.Domain.Interfaces.Repositories;
 using ProjetoGama.Infrastructure.Repositories;
-using SuperHero.Infrastructure.Repositories;
 
 namespace ProjetoGama.Infrastructure.IoC.Repositories
 {

@@ -6,13 +6,14 @@ namespace ProjetoGama.Domain.Entities
     public class Actor
     {
 
-        public Actor(int Id,
+        public Actor(int id,
                      List<int> genresId,
                      char sex,
                      double salary,
                      int userId,
                      int ranking)
         {
+            Id = id;
             UserId = userId;
             Sex = sex;
             GenresId = genresId;
@@ -57,11 +58,6 @@ namespace ProjetoGama.Domain.Entities
         public bool IsWomanOrMan()
         {
             return (Sex == 'M' || Sex == 'F');
-        }
-
-        public bool IsSalaryHourGreaterThanZero()
-        {
-            return (Salary > 0);
         }
 
         public bool IsRankingBeBetweenZeroAndFive()

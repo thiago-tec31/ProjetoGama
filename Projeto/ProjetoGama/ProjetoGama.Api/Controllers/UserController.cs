@@ -21,7 +21,7 @@ namespace ProjetoGama.Api.Controllers
             _userAppService = userAppService;
         }
 
-        [Authorize]
+       // [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(string), 201)]
         [ProducesResponseType(400)]

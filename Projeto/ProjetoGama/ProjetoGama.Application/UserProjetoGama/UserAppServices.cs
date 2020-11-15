@@ -34,7 +34,7 @@ namespace ProjetoGama.Application.UserProjetoGama
                 return default;
             }
 
-            var user = new User(input.Name, input.Login, input.Password, profile);
+            var user = new User(input.Name, input.Email, input.Password, profile);
 
             if (!user.IsValid())
             {

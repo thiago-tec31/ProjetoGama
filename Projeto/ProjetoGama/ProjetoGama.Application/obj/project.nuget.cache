@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SnxiTk3OHsKBvlW/smLOl9IeVQ/QJwBy4fEsDtL5gbi0JVyKLbfGsRzhD33fAwnAEeQPeQ1zJzIPCq9WZdPIXA==",
+  "dgSpecHash": "mxMeWaPnWClD+vuclh0zNtbyt6+3lXxUq3U9C1JJEup2SrZAaCZ1VGSbyQTo/azEdxd+/VKRM8F+unm69N2niw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thiaago\\OneDrive\\Área de Trabalho\\Projetos\\Avanade\\Projeto\\ProjetoGama\\ProjetoGama.Application\\ProjetoGama.Application.csproj",
+  "projectFilePath": "C:\\Users\\Thiaago\\OneDrive\\Documentos\\GitHub\\ProjetoGama\\Projeto\\ProjetoGama\\ProjetoGama.Application\\ProjetoGama.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thiaago\\.nuget\\packages\\marraia.notifications\\1.1.2\\marraia.notifications.1.1.2.nupkg.sha512",
     "C:\\Users\\Thiaago\\.nuget\\packages\\mediatr\\8.0.2\\mediatr.8.0.2.nupkg.sha512",

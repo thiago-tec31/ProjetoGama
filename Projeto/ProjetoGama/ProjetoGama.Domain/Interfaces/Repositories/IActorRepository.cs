@@ -8,6 +8,7 @@ namespace ProjetoGama.Domain.Interfaces.Repositories
     {
         Task<int> InsertActorAsync(Actor actor);
         Task<Actor> GetActorByIdAsync(int id);
+        Task<int> GetActorByUserIdAsync(int UserId);
         IEnumerable<Actor> GetActor();
     }
 }

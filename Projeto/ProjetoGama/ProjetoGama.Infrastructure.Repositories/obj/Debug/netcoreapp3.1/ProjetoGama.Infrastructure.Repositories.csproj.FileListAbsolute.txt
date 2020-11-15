@@ -10,3 +10,15 @@ C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.csproj.CopyComplete
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.dll
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.pdb
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.deps.json
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.dll
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\bin\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.pdb
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\bin\Debug\netcoreapp3.1\ProjetoGama.Domain.dll
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\bin\Debug\netcoreapp3.1\ProjetoGama.Domain.pdb
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.csprojAssemblyReference.cache
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.AssemblyInfoInputs.cache
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.AssemblyInfo.cs
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.csproj.CopyComplete
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.dll
+C:\Users\Thiaago\OneDrive\Documentos\GitHub\ProjetoGama\Projeto\ProjetoGama\ProjetoGama.Infrastructure.Repositories\obj\Debug\netcoreapp3.1\ProjetoGama.Infrastructure.Repositories.pdb

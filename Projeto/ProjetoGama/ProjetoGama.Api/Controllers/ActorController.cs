@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Marraia.Notifications.Base;
 using Marraia.Notifications.Models;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoGama.Application.ProjetoGama.Input;
 using ProjetoGama.Application.ProjetoGama.Interfaces;
@@ -20,10 +22,10 @@ namespace ProjetoGama.Api.Controllers
         public ActorController(INotificationHandler<DomainNotification> notification,
                                 IActorAppServices actorAppService) : base(notification) 
         {
-
             _actorAppService = actorAppService;
         }
 
+        [Authorize]
         [HttpPost]
         [ProducesResponseType(typeof(string), 201)]
         [ProducesResponseType(400)]

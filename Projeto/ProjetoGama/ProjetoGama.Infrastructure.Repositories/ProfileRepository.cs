@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
-namespace SuperHero.Infrastructure.Repositories
+namespace ProjetoGama.Infrastructure.Repositories
 {
     public class ProfileRepository : IProfileRepository
     {
@@ -36,7 +36,7 @@ namespace SuperHero.Infrastructure.Repositories
 
                         while (reader.Read())
                         {
-                            var profile = new Profile(int.Parse(reader["id"].ToString()),
+                            var profile = new Profile(int.Parse(reader["ProfileId"].ToString()),
                                                 reader["Description"].ToString());
 
                             return profile;

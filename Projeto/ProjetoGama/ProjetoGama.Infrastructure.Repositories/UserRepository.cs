@@ -23,15 +23,15 @@ namespace ProjetoGama.Infrastructure.Repositories
             {
                 using (var con = new SqlConnection(_configuration["ConnectionString"]))
                 {
-                    var sqlCmd = @$"SELECT U.Id, 
+                    var sqlCmd = @$"SELECT U.UserId, 
                                            U.Name,
                                            U.Email,
                                            U.Password,
                                            P.ProfileId,
                                            P.Description 
                                         FROM [USER] U
-                                    JOIN [PROFILE] P ON U.idProfile = P.Id
-                                    WHERE U.Id='{email}'";
+                                    JOIN [PROFILE] P ON U.ProfileId = P.ProfileId
+                                    WHERE U.Email='{email}'";
 
                     using (SqlCommand cmd = new SqlCommand(sqlCmd, con))
                     {
@@ -44,12 +44,11 @@ namespace ProjetoGama.Infrastructure.Repositories
 
                         while (reader.Read())
                         {
-                            var user = new User(reader["Name"].ToString(),
-                                                reader["Email"].ToString(),
-                                                reader["Password"].ToString(),
+                            var user = new User(int.Parse(reader["UserId"].ToString()),
+                                                reader["Name"].ToString(),
                                                 new Profile(int.Parse(reader["ProfileId"].ToString()),
                                                             reader["Description"].ToString()));
-
+                        
                             user.InformationLoginUser(reader["Email"].ToString(), reader["Password"].ToString());
                             return user;
                         }
@@ -152,15 +151,15 @@ namespace ProjetoGama.Infrastructure.Repositories
             {
                 using (var con = new SqlConnection(_configuration["ConnectionString"]))
                 {
-                    var sqlCmd = @$"SELECT U.Id, 
+                    var sqlCmd = @$"SELECT U.UserId, 
                                            U.Name,
                                            U.Email,
                                            U.Password,
                                            P.ProfileId,
                                            P.Description 
                                         FROM [USER] U
-                                    JOIN [PROFILE] P ON U.idProfile = P.Id
-                                    WHERE U.Id='{id}'";
+                                    JOIN [PROFILE] P ON U.ProfileId = P.ProfileId
+                                    WHERE U.UserId='{id}'";
 
                     using (SqlCommand cmd = new SqlCommand(sqlCmd, con))
                     {
@@ -173,9 +172,8 @@ namespace ProjetoGama.Infrastructure.Repositories
 
                         while (reader.Read())
                         {
-                            var user = new User(reader["Name"].ToString(),
-                                                reader["Email"].ToString(),
-                                                reader["Password"].ToString(),
+                            var user = new User(int.Parse(reader["UserId"].ToString()),
+                                                reader["Name"].ToString(),
                                                 new Profile(int.Parse(reader["ProfileId"].ToString()),
                                                             reader["Description"].ToString()));
 
