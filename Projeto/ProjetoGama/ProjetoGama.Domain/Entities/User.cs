@@ -21,11 +21,11 @@ namespace ProjetoGama.Domain.Entities
 
         public User(int id,
                 string name,
-                Profile profile)
+                Profile profileId)
         {
             Id = id;
             Name = name;
-            Profile = profile;
+            Profile = profileId;
         }
 
         public int Id { get; private set; }

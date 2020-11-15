@@ -24,68 +24,63 @@ namespace ProjetoGama.Infrastructure.Repositories
         {
             try
             {
-                using (var con = new SqlConnection("ConnectionString"))
+
+                Actor actor = default;
+
+                using (var con = new SqlConnection(_configuration["ConnectionString"]))
                 {
+                    con.Open();
                     var actorList = new List<Actor>();
-                    var sqlCmd = @"SELECT U.[UserId]
-                                 ,U.[Name]
-                                 ,U.[Email]
-                                 ,U.[BirthDate]
-                                 ,U.[Sex]
-                                 ,U.[Password]
-                                 ,A.[ActorId]
+                    var sqlCmd = @"SELECT 
+                                  A.[ActorId]
+                                 ,A.[UserId]   
 	                             ,A.[Racking]
+                                 ,A.[Sex]   
 	                             ,A.[SalaryHour]
-                                 FROM [dbo].[USER] U INNER JOIN [dbo].[ACTOR] A ON A.UserId = U.UserId";
+                                 FROM [dbo].[ACTOR] A";
 
                     using (var cmd = new SqlCommand(sqlCmd, con))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        con.Open();
+                    { 
 
                         var reader = cmd.ExecuteReader();
-                        var genreList = new List<Genre>();
+
+                        var genreList = new List<int>();
 
                         while (reader.Read())
                         {
 
                             var sqlGenres = @"SELECT
-                                            G.[GenreId],    
-	                                        G.[Description]
+                                            G.[GenreId]
                                             FROM [dbo].[ACTOR_GENRE] AG INNER JOIN [dbo].[GENRE] G ON AG.GenreId = G.GenreId
                                             WHERE AG.ActorId = @Id";
 
-
-                            using (var cmdGeneros = new SqlCommand(sqlGenres, con))
+                            using (var con2 = new SqlConnection(_configuration["ConnectionString"]))
                             {
-                                cmd.CommandType = CommandType.Text;
-                                cmdGeneros.Parameters.AddWithValue("@Id", reader["ActorId"].ToString());
+                                con2.Open();
 
-                                var readerGeneros = cmd.ExecuteReader();
+                                using (var cmdGeneros = new SqlCommand(sqlGenres, con2))
+                                { 
 
-                                while (readerGeneros.Read())
-                                {
-                                    var genre = new Genre(int.Parse(readerGeneros["GenreId"].ToString()),
-                                                          readerGeneros["Description"].ToString()
-                                                          );
-                                    genreList.Add(genre);
+                                    cmdGeneros.Parameters.AddWithValue("@Id", int.Parse(reader["ActorId"].ToString()));
+
+                                    var readerGeneros = cmdGeneros.ExecuteReader();
+
+                                    while (readerGeneros.Read())
+                                    {
+                                        genreList.Add(int.Parse(readerGeneros["GenreId"].ToString()));
+                                    }
+
                                 }
-
                             }
 
+                            actor = new Actor(int.Parse(reader["ActorId"].ToString()),
+                                                  genreList,
+                                                  Char.Parse(reader["Sex"].ToString()),
+                                                  double.Parse(reader["SalaryHour"].ToString()),
+                                                  int.Parse(reader["UserId"].ToString()),
+                                                  int.Parse(reader["Racking"].ToString()));
 
-                            /*var actor = new Actor(int.Parse(reader["UserId"].ToString()),
-                                                     reader["Name"].ToString(),
-                                                     DateTime.Parse(reader["BirthDate"].ToString()),
-                                                     reader["Email"].ToString(),
-                                                     reader["Password"].ToString(),
-                                                     genreList,
-                                                     (Sex) Enum.Parse(typeof(Sex), reader["Sex"].ToString()),
-                                                     Double.Parse(reader["SalaryHour"].ToString()),
-                                                     int.Parse(reader["Racking"].ToString())
-                                                     ); */
-
-                            actorList.Add(null);
+                            actorList.Add(actor);
                         }
 
                         return actorList;
@@ -104,23 +99,60 @@ namespace ProjetoGama.Infrastructure.Repositories
             {
                 using (var con = new SqlConnection(_configuration["ConnectionString"]))
                 {
-                    var heroList = new List<Actor>();
-                    var sqlCmd = "dbo.SELECIONAR_HEROIS_POR_ID";
+                    con.Open();
+                    var sqlCmd = @"SELECT 
+                                  A.[ActorId]
+                                 ,A.[UserId]
+	                             ,A.[Racking]
+                                 ,A.[Sex]
+	                             ,A.[SalaryHour]
+                                 FROM[dbo].[ACTOR] A
+                                WHERE A.[ActorId] = @Id";
 
                     using (var cmd = new SqlCommand(sqlCmd, con))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@id", id);
-
-                        con.Open();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@Id", id);
 
                         var reader = await cmd
                                             .ExecuteReaderAsync()
                                             .ConfigureAwait(false);
 
+                        var genreList = new List<int>();
+
                         while (reader.Read())
                         {
-                            return default;
+                       
+                            var sqlGenres = @"SELECT
+                                            G.[GenreId]
+                                            FROM [dbo].[ACTOR_GENRE] AG INNER JOIN [dbo].[GENRE] G ON AG.GenreId = G.GenreId
+                                            WHERE AG.ActorId = @Id";
+
+                            using (var con2 = new SqlConnection(_configuration["ConnectionString"]))
+                            {
+                                con2.Open();
+
+                                using (var cmdGeneros = new SqlCommand(sqlGenres, con2))
+                                {
+
+                                    cmdGeneros.Parameters.AddWithValue("@Id", int.Parse(reader["ActorId"].ToString()));
+
+                                    var readerGeneros = cmdGeneros.ExecuteReader();
+
+                                    while (readerGeneros.Read())
+                                    {
+                                        genreList.Add(int.Parse(readerGeneros["GenreId"].ToString()));
+                                    }
+
+                                }
+                            }                                                       
+                                
+                            return  new Actor(int.Parse(reader["ActorId"].ToString()),
+                                                  genreList,
+                                                  Char.Parse(reader["Sex"].ToString()),
+                                                  double.Parse(reader["SalaryHour"].ToString()),
+                                                  int.Parse(reader["UserId"].ToString()),
+                                                  int.Parse(reader["Racking"].ToString()));
                         }
 
                         return default;
@@ -135,42 +167,66 @@ namespace ProjetoGama.Infrastructure.Repositories
 
         public async Task<int> InsertActorAsync(Actor actor)
         {
-            /* try
+             try
              {
                  using (var con = new SqlConnection(_configuration["ConnectionString"]))
                  {
                      var sqlCmd = @"INSERT INTO 
-                                     HERO (Name, 
-                                         IdEditor, 
-                                         Age, 
-                                         Created) 
-                                VALUES (@name, 
-                                         @editor,
-                                         @age, 
-                                         @created); SELECT scope_identity();";
+                                     [ACTOR](UserId, 
+                                         Racking, 
+                                         Sex, 
+                                         SalaryHour) 
+                                VALUES (@UserId, 
+                                         @Racking,
+                                         @Sex, 
+                                         @SalaryHour); SELECT scope_identity();";
 
                      using (SqlCommand cmd = new SqlCommand(sqlCmd, con))
                      {
-                         cmd.CommandType = CommandType.Text;
+                        con.Open();
+                        cmd.CommandType = CommandType.Text;
 
-                         cmd.Parameters.AddWithValue("name", actor.);
-
-
-                         con.Open();
-                         var id = await cmd
+                        cmd.Parameters.AddWithValue("UserId", actor.UserId);
+                        cmd.Parameters.AddWithValue("Racking", actor.Ranking);
+                        cmd.Parameters.AddWithValue("Sex", actor.Sex);
+                        cmd.Parameters.AddWithValue("SalaryHour", actor.Salary);
+                        
+                        var id = await cmd
                                          .ExecuteScalarAsync()
                                          .ConfigureAwait(false);
 
-                         return int.Parse(id.ToString());
+                        foreach (int element in actor.GenresId)
+                        {
+                            using (var con2 = new SqlConnection(_configuration["ConnectionString"]))
+                            {
+                                var sql = @"INSERT INTO 
+                                     [ACTOR_GENRE](ActorId, 
+                                         GenreId) 
+                                VALUES (@ActorId, 
+                                         @GenreId);";
+
+                                using (SqlCommand cmd2 = new SqlCommand(sql, con2))
+                                {
+                                    con.Open();
+                                    cmd.CommandType = CommandType.Text;
+
+                                    cmd.Parameters.AddWithValue("ActorId", id);
+                                    cmd.Parameters.AddWithValue("GenreId", element);
+
+                                    cmd.ExecuteScalar();
+
+                                }
+                            }
+                        }
+
+                        return int.Parse(id.ToString());
                      }
                  }
              }
              catch (SqlException ex)
              {
                  throw new Exception(ex.Message);
-             } */
-
-            return 0;
+             } 
         }
 
    

@@ -38,7 +38,6 @@ C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.AssemblyInfoInputs.cache
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.AssemblyInfo.cs
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.csproj.CoreCompileInputs.cache
-C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.RazorTargetAssemblyInfo.cache
 C:\Users\Thiaago\OneDrive\Área de Trabalho\Projetos\Avanade\Projeto\ProjetoGama\ProjetoGama.Api\obj\Debug\netcoreapp3.1\ProjetoGama.Api.csproj.CopyComplete

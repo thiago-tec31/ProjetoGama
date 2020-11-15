@@ -6,8 +6,23 @@ namespace ProjetoGama.Domain.Entities
     public class Actor
     {
 
+        public Actor(int Id,
+                     List<int> genresId,
+                     char sex,
+                     double salary,
+                     int userId,
+                     int ranking)
+        {
+            UserId = userId;
+            Sex = sex;
+            GenresId = genresId;
+            Ranking = ranking;
+            Salary = salary;
+        }
+
+
         public Actor(List<int> genresId,
-                     Sex sex,
+                     char sex,
                      double salary,
                      int userId,
                      int ranking) 
@@ -24,13 +39,13 @@ namespace ProjetoGama.Domain.Entities
         public double Salary { get; private set; }
         public int Ranking { get; private set; }
         public int UserId { get; private set; }
-        public Sex Sex { get; private set; }
+        public char Sex { get; private set; }
 
         public bool IsValid()
         {
             var valid = true;
 
-            if ((Salary <= 0) || (Ranking <= 0) || (UserId <= 0) || !Enum.IsDefined(typeof(Sex), Sex) )
+            if ((Salary <= 0) || (Ranking <= 0) || (UserId <= 0) ||  char.IsWhiteSpace(Sex))
             {
                 valid = false;
             }
@@ -39,11 +54,21 @@ namespace ProjetoGama.Domain.Entities
 
         }
 
-    }
+        public bool IsWomanOrMan()
+        {
+            return (Sex == 'M' || Sex == 'F');
+        }
 
-    public enum Sex
-    {
-        Man,
-        Woman
+        public bool IsSalaryHourGreaterThanZero()
+        {
+            return (Salary > 0);
+        }
+
+        public bool IsRankingBeBetweenZeroAndFive()
+        {
+            return (Ranking >= 0 && Ranking <= 5);
+        }
+
+
     }
 }
