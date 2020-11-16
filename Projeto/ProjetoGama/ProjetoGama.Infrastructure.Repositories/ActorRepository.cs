@@ -44,14 +44,13 @@ namespace ProjetoGama.Infrastructure.Repositories
 
                         var reader = cmd.ExecuteReader();
 
-                        var genreList = new List<int>();
-
                         while (reader.Read())
                         {
 
-                            genreList.Clear();
+                            var genres = new List<Genre>();
 
                             var sqlGenres = @"SELECT
+                                            G.[Description],
                                             G.[GenreId]
                                             FROM [dbo].[ACTOR_GENRE] AG INNER JOIN [dbo].[GENRE] G ON AG.GenreId = G.GenreId
                                             WHERE AG.ActorId = @Id";
@@ -69,14 +68,15 @@ namespace ProjetoGama.Infrastructure.Repositories
 
                                     while (readerGeneros.Read())
                                     {
-                                        genreList.Add(int.Parse(readerGeneros["GenreId"].ToString()));
+                                        genres.Add(new Genre(int.Parse(readerGeneros["GenreId"].ToString()), 
+                                                                readerGeneros["Description"].ToString()));
                                     }
 
                                 }
                             }
 
                             actor = new Actor(int.Parse(reader["ActorId"].ToString()),
-                                                  genreList,
+                                                  genres,
                                                   Char.Parse(reader["Sex"].ToString()),
                                                   double.Parse(reader["SalaryHour"].ToString()),
                                                   int.Parse(reader["UserId"].ToString()),
@@ -120,13 +120,13 @@ namespace ProjetoGama.Infrastructure.Repositories
                                             .ExecuteReaderAsync()
                                             .ConfigureAwait(false);
 
-                        var genreList = new List<int>();
-
                         while (reader.Read())
                         {
-                       
+                            var genres = new List<Genre>();
+
                             var sqlGenres = @"SELECT
-                                            G.[GenreId]
+                                            G.[GenreId],
+                                            G.[Description]
                                             FROM [dbo].[ACTOR_GENRE] AG INNER JOIN [dbo].[GENRE] G ON AG.GenreId = G.GenreId
                                             WHERE AG.ActorId = @Id";
 
@@ -143,14 +143,15 @@ namespace ProjetoGama.Infrastructure.Repositories
 
                                     while (readerGeneros.Read())
                                     {
-                                        genreList.Add(int.Parse(readerGeneros["GenreId"].ToString()));
+                                        genres.Add(new Genre(int.Parse(readerGeneros["GenreId"].ToString()),
+                                                                readerGeneros["Description"].ToString()));
                                     }
 
                                 }
                             }                                                       
                                 
                             return  new Actor(int.Parse(reader["ActorId"].ToString()),
-                                                  genreList,
+                                                  genres,
                                                   Char.Parse(reader["Sex"].ToString()),
                                                   double.Parse(reader["SalaryHour"].ToString()),
                                                   int.Parse(reader["UserId"].ToString()),
@@ -191,8 +192,6 @@ namespace ProjetoGama.Infrastructure.Repositories
                         var reader = await cmd
                                             .ExecuteReaderAsync()
                                             .ConfigureAwait(false);
-
-                        var genreList = new List<int>();
 
                         while (reader.Read())
                         { 
@@ -239,7 +238,7 @@ namespace ProjetoGama.Infrastructure.Repositories
                                          .ExecuteScalarAsync()
                                          .ConfigureAwait(false);
 
-                        foreach (int element in actor.GenresId)
+                        foreach (Genre element in actor.GenresId)
                         {
                             using (var con2 = new SqlConnection(_configuration["ConnectionString"]))
                             {
@@ -255,7 +254,7 @@ namespace ProjetoGama.Infrastructure.Repositories
                                     cmd2.CommandType = CommandType.Text;
 
                                     cmd2.Parameters.AddWithValue("ActorId", id);
-                                    cmd2.Parameters.AddWithValue("GenreId", element);
+                                    cmd2.Parameters.AddWithValue("GenreId", element.Id);
 
                                     cmd2.ExecuteScalar();
 

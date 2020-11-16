@@ -12,16 +12,19 @@ namespace ProjetoGama.Application.ProjetoGama
     {
         private const int Const_ActorID = 2;
         private readonly IActorRepository _actorRepository;
+        private readonly IGenreRepository _genreRepository;
         private readonly IUserRepository _userRepository;
         private readonly ISmartNotification _notification;
 
         public ActorAppServices(ISmartNotification notification,
                                 IActorRepository actorRepositor,
-                                IUserRepository userRepository)
+                                IUserRepository userRepository,
+                                IGenreRepository genreRepository)
         {
             _notification = notification;
             _actorRepository = actorRepositor;
             _userRepository = userRepository;
+            _genreRepository = genreRepository;
         }
 
         public IEnumerable<Actor> Get()
@@ -42,13 +45,17 @@ namespace ProjetoGama.Application.ProjetoGama
                                     .GetByIdAsync(actorInput.UserId)
                                     .ConfigureAwait(false);
 
+            var genre = await _genreRepository
+                                    .GetGenreByIdAsync(actorInput.GenresId)
+                                    .ConfigureAwait(false);
+
             if (user is null)
             {
                 _notification.NewNotificationBadRequest("Usuário associado não existe!");
                 return default;
             }
 
-            var actor = new Actor(actorInput.GenresId, actorInput.Sex, actorInput.Salary, user.Id, actorInput.Ranking);
+            var actor = new Actor(genre, actorInput.Sex, actorInput.Salary, user.Id, actorInput.Ranking);
 
             if (!actor.IsValid())
             {

@@ -11,6 +11,7 @@ namespace ProjetoGama.Infrastructure.IoC.Repositories
             services.AddScoped<IActorRepository, ActorRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IProfileRepository, ProfileRepository>();
+            services.AddScoped<IGenreRepository, GenreRepository>();
         }
     }
 }

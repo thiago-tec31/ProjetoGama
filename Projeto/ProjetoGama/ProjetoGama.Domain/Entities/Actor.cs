@@ -7,7 +7,7 @@ namespace ProjetoGama.Domain.Entities
     {
 
         public Actor(int id,
-                     List<int> genresId,
+                     List<Genre> genresId,
                      char sex,
                      double salary,
                      int userId,
@@ -22,7 +22,7 @@ namespace ProjetoGama.Domain.Entities
         }
 
 
-        public Actor(List<int> genresId,
+        public Actor(List<Genre> genresId,
                      char sex,
                      double salary,
                      int userId,
@@ -36,7 +36,7 @@ namespace ProjetoGama.Domain.Entities
         }
 
         public int Id { get; private set; }
-        public List<int> GenresId { get; private set; }
+        public List<Genre> GenresId { get; private set; }
         public double Salary { get; private set; }
         public int Ranking { get; private set; }
         public int UserId { get; private set; }
