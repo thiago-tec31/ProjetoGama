@@ -13,7 +13,11 @@ namespace ProjetoGama.Domain.Entities
         {
             Name = name;
             Email = email;
-            CriptografyPassword(password);
+            Password = password;
+            if (!string.IsNullOrEmpty(password))
+            {
+                CriptografyPassword(password);
+            }
             Profile = profile;
             Created = DateTime.Now;
         }

@@ -23,22 +23,23 @@ namespace ProjetoGama.Application.UserProjetoGama
             _notification = notification;
         }
         public async Task<UserViewModel> InsertAsync(UserInput input)
-        {
+        {           
+
+            var user = new User(input.Name, input.Email, input.Password, new Profile(input.IdProfile,""));
+
+            if (!user.IsValid())
+            {
+                _notification.NewNotificationBadRequest("Dados do usuário são obrigatórios");
+                return default;
+            }
+
             var profile = await _profileRepository
                                     .GetByIdAsync(input.IdProfile)
                                     .ConfigureAwait(false);
 
             if (profile is null)
             {
-                _notification.NewNotificationBadRequest("Perfil associado não existe!");
-                return default;
-            }
-
-            var user = new User(input.Name, input.Email, input.Password, profile);
-
-            if (!user.IsValid())
-            {
-                _notification.NewNotificationBadRequest("Dados do usuário são obrigatórios");
+                _notification.NewNotificationConflict("Perfil associado não existe!");
                 return default;
             }
 
