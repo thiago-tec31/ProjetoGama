@@ -6,6 +6,12 @@ namespace ProjetoGama.Domain.Entities
     public class Actor
     {
 
+        public Actor()
+        {
+
+        }
+
+
         public Actor(int id,
                      List<Genre> genresId,
                      char sex,
@@ -46,7 +52,7 @@ namespace ProjetoGama.Domain.Entities
         {
             var valid = true;
 
-            if ((Salary <= 0) || (Ranking <= 0) || (UserId <= 0) ||  char.IsWhiteSpace(Sex))
+            if ((Salary <= 0) || (Ranking <= 0) || (UserId <= 0) ||  (Sex == '\0'))
             {
                 valid = false;
             }

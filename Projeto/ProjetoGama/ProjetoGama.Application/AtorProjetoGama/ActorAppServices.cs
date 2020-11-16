@@ -41,21 +41,11 @@ namespace ProjetoGama.Application.ProjetoGama
         public async Task<Actor> InsertAsync(ActorInput actorInput)
         {
 
-            var user = await _userRepository
-                                    .GetByIdAsync(actorInput.UserId)
-                                    .ConfigureAwait(false);
-
             var genre = await _genreRepository
                                     .GetGenreByIdAsync(actorInput.GenresId)
                                     .ConfigureAwait(false);
 
-            if (user is null)
-            {
-                _notification.NewNotificationBadRequest("Usuário associado não existe!");
-                return default;
-            }
-
-            var actor = new Actor(genre, actorInput.Sex, actorInput.Salary, user.Id, actorInput.Ranking);
+            var actor = new Actor(genre, actorInput.Sex, actorInput.Salary, actorInput.UserId, actorInput.Ranking);
 
             if (!actor.IsValid())
             {
@@ -72,6 +62,16 @@ namespace ProjetoGama.Application.ProjetoGama
             if (!actor.IsRankingBeBetweenZeroAndFive())
             {
                 _notification.NewNotificationConflict("É necessário informar o ranking entre 0 e 5. ");
+                return default;
+            }
+
+            var user = await _userRepository
+                                  .GetByIdAsync(actorInput.UserId)
+                                  .ConfigureAwait(false);
+
+            if (user is null)
+            {
+                _notification.NewNotificationConflict("Usuário associado não existe!");
                 return default;
             }
 
