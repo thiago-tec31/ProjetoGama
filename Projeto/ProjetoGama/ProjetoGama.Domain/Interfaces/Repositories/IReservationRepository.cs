@@ -6,8 +6,8 @@ namespace ProjetoGama.Domain.Interfaces.Repositories
 {
     public interface IReservationRepository
     {
-        Task<int> InsertReservationAsync(Reservation actor);
+        Task<int> InsertReservationAsync(Reservation reservation);
         Task<Reservation> GetReservationByIdAsync(int id);
-        IEnumerable<Reservation> GetReservation();
+        IEnumerable<Reservation> GetReservations();
     }
 }

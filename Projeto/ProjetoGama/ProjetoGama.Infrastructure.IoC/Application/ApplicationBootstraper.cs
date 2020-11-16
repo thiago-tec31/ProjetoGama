@@ -3,6 +3,8 @@ using ProjetoGama.Application.ProjetoGama;
 using ProjetoGama.Application.ProjetoGama.Interfaces;
 using ProjetoGama.Application.UserProjetoGama;
 using ProjetoGama.Application.UserProjetoGama.Interfaces;
+using ProjetoGama.Application.ReservationProjetoGama.Interfaces;
+using ProjetoGama.Application.ReservationProjetoGama;
 
 namespace ProjetoGama.Infrastructure.IoC.Application
 {
@@ -13,6 +15,7 @@ namespace ProjetoGama.Infrastructure.IoC.Application
             services.AddScoped<ILoginAppServices, LoginAppServices>();
             services.AddScoped<IUserAppServices, UserAppServices>();
             services.AddScoped<IActorAppServices, ActorAppServices>();
+            services.AddScoped<IReservationAppService, ReservationAppService>();
         }
     }
 }

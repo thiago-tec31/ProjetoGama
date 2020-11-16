@@ -17,6 +17,15 @@ namespace ProjetoGama.Domain.Entities
             ActorId = actorId;
         }
 
+        public Reservation(DateTime startDate,
+                           int producerId,
+                           int actorId)
+        {
+            StartDate = startDate;
+            ProducerId = producerId;
+            ActorId = actorId;
+        }
+
         public int ReservationId { get; private set; }
         public DateTime StartDate { get; private set; }
         public int ProducerId { get; private set; }
