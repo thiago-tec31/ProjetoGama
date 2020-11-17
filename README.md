@@ -50,3 +50,11 @@ Projeto desenvolvido para conclusão do curso na Gama Academy - Trio: Thiago Cav
 ### Endereço do repositório do Front End.
 - Repositório: https://github.com/hellen365/Gama-Emissora
 
+### Dificuldades encontradas 
+- Tempo, e algumas tecnologias.
+
+### Testes
+- Teste unitário de algumas funcionalidades e teste funcionais.
+
+### Infraestrutura 
+- Utilização do GitHub.
