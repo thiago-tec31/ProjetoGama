@@ -27,6 +27,20 @@ namespace ProjetoGama.Api
         {
             services.AddControllers();
 
+            #region AddCors
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder =>
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader());
+            });
+
+
+            #endregion
+
             #region Autenticação
 
             var signingConfigurations = new SigningConfigurations();
@@ -89,6 +103,7 @@ namespace ProjetoGama.Api
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             app.UseAuthorization();
 
