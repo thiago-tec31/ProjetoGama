@@ -41,9 +41,12 @@ Projeto desenvolvido para conclusão do curso na Gama Academy - Trio: Thiago Cav
 - Azure Devops para alocar das atividades e geração de versão 
 - Visual studio 2019 (Back End)
 - Banco de dados SQL Server 2019
-- Angular (Front End)
+- Angular (Front End) 
 
 ### Daily : Horário de 11h30 às 11h45. Reunião de alinhamento diario para acompanhamento das atividades
 
 #### Review e Retrospectiva: Dia 16/11/2020 as 9h00
+
+### Endereço do repositório do Front End.
+- Repositório: https://github.com/hellen365/Gama-Emissora
 
